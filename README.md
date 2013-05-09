@@ -1,0 +1,4 @@
+hisvak
+======
+
+Hisvak solr config

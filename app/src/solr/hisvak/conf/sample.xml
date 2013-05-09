@@ -1,0 +1,214 @@
+<HISVAK>
+  <Nrorg_std>37</Nrorg_std>
+  <Nmorg_std>Afdeling Kaatsheuvel van Nederlandsche Roomsch Katholieke Bond van Transportarbeiders 'St. Bonifacius'</Nmorg_std>
+  <Landelijk>n</Landelijk>
+  <Afdvan_bewerkt_nr>0</Afdvan_bewerkt_nr>
+  <Aangsl_bewerkt_nr>0</Aangsl_bewerkt_nr>
+  <Bedrijfsgroep>Transport</Bedrijfsgroep>
+  <Beroepsgroep>Transportarbeiders</Beroepsgroep>
+  <Plaats_StandaardNaam>Kaatsheuvel</Plaats_StandaardNaam>
+  <Plaats_Standaardnaam_voor_index>Kaatsheuvel</Plaats_Standaardnaam_voor_index>
+  <StandaardGemNaam>Loon op Zand</StandaardGemNaam>
+  <StandaardProvincie>Noord-Brabant</StandaardProvincie>
+  <Richting>Rooms-Katholiek</Richting>
+  <Opr_jar>1919</Opr_jar>
+  <bronnen>
+    <HISVAK_BRON>
+      <NummerOrg>9029</NummerOrg>
+      <Naamorg>Nederlandsche Roomsch Katholieke Bond van Spoor- en Tramwegpersoneel</Naamorg>
+      <Nrorg_std>37</Nrorg_std>
+      <Bron>Adresboek 1920 Directie van den Arbeid</Bron>
+    </HISVAK_BRON>
+    <HISVAK_BRON>
+      <NummerOrg>16372</NummerOrg>
+      <Naamorg>Nederlandsch Roomsch-Katholiek Secretariaat van Spoor- en Tramwegpersoneel 'St. Raphaël'</Naamorg>
+      <Nrorg_std>37</Nrorg_std>
+      <Bron>Adresboek 1910 Directie van den Arbeid</Bron>
+    </HISVAK_BRON>
+    <HISVAK_BRON>
+      <NummerOrg>50596</NummerOrg>
+      <Nrorg_std>37</Nrorg_std>
+      <Bron>Nederlandsche Roomsch Katholieke Bond van Spoor- en tramwegpersoneel 'St. Raphaël', Jaarverslag 1919</Bron>
+    </HISVAK_BRON>
+    <HISVAK_BRON>
+      <NummerOrg>61800</NummerOrg>
+      <Nrorg_std>37</Nrorg_std>
+      <Bron>Nederlandsche Roomsch Katholieke Bond van Spoor- en Tramwegpersoneel 'St. Raphael', Jaarverslag 1921</Bron>
+    </HISVAK_BRON>
+    <HISVAK_BRON>
+      <NummerOrg>64664</NummerOrg>
+      <Nrorg_std>37</Nrorg_std>
+      <Bron>Jaarverslag 1932, Ned. R.K. Bond van Transportarbeiders ''St. Bonifatius''</Bron>
+    </HISVAK_BRON>
+  </bronnen>
+  <leden>
+    <HISVAK_LID>
+      <Nummer_lid>495226</Nummer_lid>
+      <Jaar>1919</Jaar>
+      <Aantalleden>17</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphaël', jaarverslag 1919</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>499783</Nummer_lid>
+      <Jaar>1920</Jaar>
+      <Aantalleden>14</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1921</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>499784</Nummer_lid>
+      <Jaar>1920</Jaar>
+      <Aantalleden>14</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphaël', jaarverslag 1920</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>500472</Nummer_lid>
+      <Jaar>1920</Jaar>
+      <Aantalleden>17</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Adresboek, 1920</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>509897</Nummer_lid>
+      <Jaar>1921</Jaar>
+      <Aantalleden>15</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1922</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>514070</Nummer_lid>
+      <Jaar>1922</Jaar>
+      <Aantalleden>16</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1923</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>518379</Nummer_lid>
+      <Jaar>1923</Jaar>
+      <Aantalleden>15</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1924</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>521988</Nummer_lid>
+      <Jaar>1924</Jaar>
+      <Aantalleden>14</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1925</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>525576</Nummer_lid>
+      <Jaar>1925</Jaar>
+      <Aantalleden>14</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1926</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>529173</Nummer_lid>
+      <Jaar>1926</Jaar>
+      <Aantalleden>13</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1927</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>532782</Nummer_lid>
+      <Jaar>1927</Jaar>
+      <Aantalleden>13</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1928</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>537152</Nummer_lid>
+      <Jaar>1928</Jaar>
+      <Aantalleden>17</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1929</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>540857</Nummer_lid>
+      <Jaar>1929</Jaar>
+      <Aantalleden>13</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1930</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>545535</Nummer_lid>
+      <Jaar>1930</Jaar>
+      <Aantalleden>13</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1931</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>550436</Nummer_lid>
+      <Jaar>1931</Jaar>
+      <Aantalleden>14</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1932</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>555291</Nummer_lid>
+      <Jaar>1932</Jaar>
+      <Aantalleden>12</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1933</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>560679</Nummer_lid>
+      <Jaar>1933</Jaar>
+      <Aantalleden>13</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1934</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>565624</Nummer_lid>
+      <Jaar>1934</Jaar>
+      <Aantalleden>10</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1935</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>571319</Nummer_lid>
+      <Jaar>1935</Jaar>
+      <Aantalleden>13</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1936</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>577033</Nummer_lid>
+      <Jaar>1936</Jaar>
+      <Aantalleden>12</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1937</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>582471</Nummer_lid>
+      <Jaar>1937</Jaar>
+      <Aantalleden>12</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1938</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>587791</Nummer_lid>
+      <Jaar>1938</Jaar>
+      <Aantalleden>12</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1939</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>592624</Nummer_lid>
+      <Jaar>1939</Jaar>
+      <Aantalleden>12</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1940</Bronlid>
+    </HISVAK_LID>
+    <HISVAK_LID>
+      <Nummer_lid>597233</Nummer_lid>
+      <Jaar>1940</Jaar>
+      <Aantalleden>12</Aantalleden>
+      <Nrorg_std>37</Nrorg_std>
+      <Bronlid>Ned. R.K. Bond 'St. Raphael' , jaarverslag 1940</Bronlid>
+    </HISVAK_LID>
+  </leden>
+</HISVAK>

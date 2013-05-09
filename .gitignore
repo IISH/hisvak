@@ -1,0 +1,10 @@
+app/app.iml
+app/.idea/
+app/src/main/webapp/
+app/src/solr/lib/
+import
+start.sh
+*.zip
+solr-4.3.0
+*.docx
+*.mdb

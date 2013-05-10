@@ -8,3 +8,4 @@ start.sh
 solr-4.3.0
 *.docx
 *.mdb
+data

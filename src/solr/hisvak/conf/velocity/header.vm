@@ -1,7 +1,8 @@
-<a href="#url_for_home#/browse">
+<a href="#url_for_home?lang=#param('lang')">
     <div id="head">
         <div class="logo">
-            <h1>#param('title') - $resource.a</h1>
+            <h1>$resource.title</h1>
+            <div id="toggle"><a href="#lensNoLang&lang=$resource.toggleLanguageCode">$resource.toggleLanguage</a></div>
         </div>
     </div>
 </a>

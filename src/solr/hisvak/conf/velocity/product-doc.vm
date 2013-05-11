@@ -24,11 +24,11 @@
     #date('Opr')
     #date('Oph')
     #if ($doc.getFieldValue('Bron_concat_ss'))
-        <div>#msg('Bron_concat_ss'):
+        <div>$resource.Bron_concat_ss:
             <table class="bron">
                 <tr class="result-tr">
-                    <td>#msg('bron.Nrorg_std')</td>
-                    <td>#msg('bron.source')</td>
+                    <td>$resource.Bron_concat_ss.Nrorg_std</td>
+                    <td>$resource.Bron_concat_ss.source</td>
                 </tr>
                 #foreach($tr in $doc.getFieldValue('Bron_concat_ss'))
                     <tr class="result-tr">
@@ -42,12 +42,12 @@
         </div>
     #end
     #if ($doc.getFieldValue('Lid_concat_ss'))
-        <div>#msg('Lid_concat_ss'):
+        <div>#$resource.Lid_concat_ss:
             <table class="bron">
                 <tr class="result-tr">
-                    <td>#msg('lid.Jaar')</td>
-                    <td>#msg('lid.Aantalleden')</td>
-                    <td>#msg('lid.Bronlid')</td>
+                    <td>$resource.Lid_concat_ss.Jaar</td>
+                    <td>$resource.Lid_concat_ss.Aantalleden</td>
+                    <td>$resource.Lid_concat_ss.Bronlid</td>
                 </tr>
                 #foreach($tr in $doc.getFieldValue('Lid_concat_ss', $resources))
                     <tr class="result-tr">

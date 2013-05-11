@@ -12,5 +12,5 @@
 ##  <a href="#url_for_lens&annotateBrowse=true">enable annotation</a>
   #end
   <a #annTitle("Click to switch to an XML response: &wt=xml") href="#url_for_lens&wt=xml#if($request.params.get('debugQuery'))&debugQuery=true#end">XML</a></div>
-<div>The Database Dutch Trade Unions contains information on their establishment, merging, liquidation, and number of members of the Dutch Trade Union Organization.</div>
-<div>Number of documents: 30000. Last updated on May 5th, 2013</div>
+<div>$resource.about.description</div>
+<div>$resource.about.counts</div>

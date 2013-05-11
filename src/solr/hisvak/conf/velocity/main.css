@@ -16,6 +16,17 @@
 
 #head h1 {
     margin-left: 295px;
+    color: black;
+    display: inline;
+}
+
+#toggle {
+    float:right;
+}
+
+#toggle a:link {
+    font-weight: bold;
+    color:black;
 }
 
 a:link {
@@ -86,6 +97,12 @@ a {
 
 .facet-field {
     font-weight: bold;
+}
+.facet-field-select {
+    font-weight: bold;
+    width: 265px;
+    margin-top:5px;
+    margin-bottom:5px;
 }
 
 .highlight {

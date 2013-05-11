@@ -39,3 +39,21 @@
     }
 
 </script>
+
+<style type="text/css">
+    .ac_loading {
+        background: white url(#{url_for_solr}/admin/file?file=/velocity/indicator.gif&contentType=image/gif) right center no-repeat;
+    }
+
+    #head {
+        background-image: url(#{url_for_solr}/admin/file?file=/velocity/logo-right.png&contentType=image/png)
+    }
+
+    .logo {
+        background-image: url(#{url_for_solr}/admin/file?file=/velocity/logo.png&contentType=image/png)
+    }
+
+    .constraint {
+        background: white url(#{url_for_solr}/admin/file?file=/velocity/delete.png&contentType=image/png) left center no-repeat;
+    }
+</style>

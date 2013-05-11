@@ -1,7 +1,5 @@
 hisvak.iml
 .idea
-app/src/main/webapp/
-app/src/solr/lib/
 import
 start.sh
 *.zip

@@ -88,6 +88,9 @@
     <lib dir="../../../contrib/velocity/lib" regex=".*\.jar"/>
     <lib dir="../../../dist/" regex="solr-velocity-\d.*\.jar"/>
 
+    <!-- Needed to load message resource files -->
+    <lib path="./conf/velocity"/>
+
     <!-- If a 'dir' option (with or without a regex) is used and nothing
          is found that matches, a warning will be logged.
       -->
@@ -904,7 +907,7 @@
             <str name="v.template">browse</str>
             <str name="v.layout">layout</str>
             <str name="title">Database of Dutch Trade Unions</str>
-            <str name="v.properties">lang.properties</str>
+            <!--<str name="v.properties">lang.properties</str>-->
 
             <!-- Query settings -->
             <str name="defType">edismax</str>
@@ -1749,7 +1752,7 @@
     <!--
        Custom response writers can be declared as needed...
       -->
-    <queryResponseWriter name="velocity" class="solr.VelocityResponseWriter" startup="lazy"/>
+    <queryResponseWriter name="velocity" class="solr.VelocityResourceResponseWriter" startup="lazy"/>
 
 
     <!-- XSLT response writer transforms the XML output by any xslt file found

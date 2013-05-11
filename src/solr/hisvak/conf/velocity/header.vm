@@ -1,9 +1,7 @@
 <a href="#url_for_home#/browse">
-    <div id="head"
-         style="background-image: url(#{url_for_solr}/admin/file?file=/velocity/logo-right.png&contentType=image/png)">
-        <div class="logo"
-             style="background-image: url(#{url_for_solr}/admin/file?file=/velocity/logo.png&contentType=image/png)">
-            <h1>#param('title')</h1>
+    <div id="head">
+        <div class="logo">
+            <h1>#param('title') - $resource.a</h1>
         </div>
     </div>
 </a>

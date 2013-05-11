@@ -26,18 +26,36 @@
     #if ($doc.getFieldValue('Bron_concat_ss'))
         <div>#msg('Bron_concat_ss'):
             <table class="bron">
-                <thead>
-                <tr>
-                    <th>#msg('id')</th>
-                    <th>#msg('name')</th>
-                    <th>#msg('source')</th>
+                <tr class="result-tr">
+                    <td>#msg('bron.Nrorg_std')</td>
+                    <td>#msg('bron.source')</td>
                 </tr>
-                </thead>
                 #foreach($tr in $doc.getFieldValue('Bron_concat_ss'))
-                    <tr>
-                        #foreach($td in $tr.split('_') )
-                            <td>$td</td>
-                        #end
+                    <tr class="result-tr">
+                        #set($trs=$tr.split('_'))
+                    ##                        0=NummerOrg, 1=Naamorg, 2=Bron
+                        <td>$trs[1]</td>
+                        <td>$trs[2]</td>
+                    </tr>
+                #end
+            </table>
+        </div>
+    #end
+    #if ($doc.getFieldValue('Lid_concat_ss'))
+        <div>#msg('Lid_concat_ss'):
+            <table class="bron">
+                <tr class="result-tr">
+                    <td>#msg('lid.Jaar')</td>
+                    <td>#msg('lid.Aantalleden')</td>
+                    <td>#msg('lid.Bronlid')</td>
+                </tr>
+                #foreach($tr in $doc.getFieldValue('Lid_concat_ss', $resources))
+                    <tr class="result-tr">
+                        #set($trs=$tr.split('_'))
+                    ##                        0=Nummer_lid, 1=Jaar, 2=Aantalleden, 3=Bronlid
+                        <td>$trs[1]</td>
+                        <td>$trs[2]</td>
+                        <td>$trs[3]</td>
                     </tr>
                 #end
             </table>
@@ -46,29 +64,4 @@
 
 </div>
 
-#macro(row $key)
-    #if ($doc.getFieldValue($key))
-    <div>#msg($key): <a
-            href="#url_for_nested_facet_query($key):$esc.url($doc.getFieldValue($key))">#field($key)</a>
-    </div>
-    #end
-#end
 
-#macro(date $key)
-
-    #set($year=$key+'_jar_i')
-    #set($month=$key+'_mnd_i')
-    #set($day=$key+'_dag_i')
-
-    #if ($doc.getFieldValue($year))
-    <div>#msg($key): #field($year)
-        #if ($doc.getFieldValue($month))
-            -#field($month)#end
-        #if ($doc.getFieldValue($day))
-            -#field($day)#end</div>
-    #end
-#end
-
-#macro(msg $key)
-    $key
-#end

@@ -5,7 +5,24 @@
 
 #head{
   width: 100%;
+    background-repeat: repeat-x;
 }
+
+#head .logo {
+    background-repeat:no-repeat;
+    height: 155px;
+    color:black;
+}
+
+#head h1 {
+    margin-left: 285px;
+    padding: 5px;
+}
+
+a:link {
+    text-decoration:  none;
+}
+
 .array-field {
   border: 2px solid #474747;
   background: #FFE9D8;
@@ -50,8 +67,8 @@ a {
 }
 
 .navigators h2 {
-  background: #FEC293;
-  border: 1px solid #ce9d77;
+  background: #75b1aa;
+  border: 1px solid #43a4b1;
   padding: 5px;
 }
 
@@ -205,4 +222,22 @@ li.show {
   width:80%;
   position: relative;
 
+}
+
+.bron {
+    font-size: 10pt;
+}
+
+th {
+    text-align:left;
+    padding-right:15px;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+td {
+    text-align:left;
+    padding-right:15px;
+    padding-left: 0px;
+    margin: 0px;
 }

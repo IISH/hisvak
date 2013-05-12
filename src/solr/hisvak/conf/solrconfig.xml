@@ -945,18 +945,20 @@
             <int name="f.Opr_jar_i.facet.range.start">1620</int>
             <int name="f.Opr_jar_i.facet.range.end">2020</int>
             <int name="f.Opr_jar_i.facet.range.gap">10</int>
-            <str name="f.Opr_jar_i.facet.range.other">before</str>
-            <str name="f.Opr_jar_i.facet.range.other">after</str>
+            <!--<str name="f.Opr_jar_i.facet.range.other">before</str>-->
+            <!--<str name="f.Opr_jar_i.facet.range.other">after</str>-->
             <str name="facet.range">Oph_jar_i</str>
             <int name="f.Oph_jar_i.facet.range.start">1870</int>
             <int name="f.Oph_jar_i.facet.range.end">2020</int>
             <int name="f.Oph_jar_i.facet.range.gap">10</int>
-            <str name="f.Opr_jar_i.facet.range.other">before</str>
-            <str name="f.Opr_jar_i.facet.range.other">after</str>
+            <!--<str name="f.Opr_jar_i.facet.range.other">before</str>-->
+            <!--<str name="f.Opr_jar_i.facet.range.other">after</str>-->
 
             <!-- Highlighting defaults -->
             <str name="hl">on</str>
-            <str name="hl.fl">Plaats_Standaardnaam_voor_index_s StandaardGemNaam_s StandaardProvincie_s Bedrijfsgroep_s Landelijk_s Nmorg_std_s</str>
+            <str name="hl.fl">Plaats_Standaardnaam_voor_index_s StandaardGemNaam_s StandaardProvincie_s Bedrijfsgroep_s
+                Landelijk_s Nmorg_std_s
+            </str>
             <str name="hl.encoder">html</str>
             <str name="hl.simple.pre">&lt;b&gt;</str>
             <str name="hl.simple.post">&lt;/b&gt;</str>
@@ -1109,7 +1111,7 @@
          RequestHandlers.
       -->
     <requestHandler name="/admin/"
-                    class="solr.admin.AdminHandlers"/>
+                    class="solr.admin.AdminHandlers" enable="${solr.admin.enabled:false}"/>
     <!-- This single handler is equivalent to the following... -->
     <!--
        <requestHandler name="/admin/luke"       class="solr.admin.LukeRequestHandler" />
@@ -1117,8 +1119,9 @@
        <requestHandler name="/admin/plugins"    class="solr.admin.PluginInfoHandler" />
        <requestHandler name="/admin/threads"    class="solr.admin.ThreadDumpHandler" />
        <requestHandler name="/admin/properties" class="solr.admin.PropertiesRequestHandler" />
-       <requestHandler name="/admin/file"       class="solr.admin.ShowFileRequestHandler" >
+
       -->
+    <requestHandler name="/admin/file" class="solr.admin.ShowFileRequestHandler"/>
     <!-- If you wish to hide files under ${solr.home}/conf, explicitly
          register the ShowFileRequestHandler using:
       -->
@@ -1133,7 +1136,7 @@
       -->
 
     <!-- ping/healthcheck -->
-    <requestHandler name="/admin/ping" class="solr.PingRequestHandler">
+    <requestHandler name="/admin/ping" class="solr.PingRequestHandler" enable="${solr.admin.enabled:false}">
         <lst name="invariants">
             <str name="q">solrpingquery</str>
         </lst>
@@ -1149,7 +1152,7 @@
     </requestHandler>
 
     <!-- Echo the request contents back to the client -->
-    <requestHandler name="/debug/dump" class="solr.DumpRequestHandler">
+    <requestHandler name="/debug/dump" class="solr.DumpRequestHandler" enable="${solr.admin.enabled:false}">
         <lst name="defaults">
             <str name="echoParams">explicit</str>
             <str name="echoHandler">true</str>
@@ -1169,7 +1172,7 @@
 
          https://wiki.apache.org/solr/SolrCloud/
       -->
-    <requestHandler name="/replication" class="solr.ReplicationHandler">
+    <requestHandler name="/replication" class="solr.ReplicationHandler" enable="${solr.admin.enabled:false}">
         <!--
            To enable simple master/slave replication, uncomment one of the
            sections below, depending on whether this solr instance should be
@@ -1372,7 +1375,7 @@
          In reality you will likely want to add the component to your
          already specified request handlers.
       -->
-    <requestHandler name="/tvrh" class="solr.SearchHandler" startup="lazy">
+    <requestHandler name="/tvrh" class="solr.SearchHandler" startup="lazy" enable="${solr.admin.enabled:false}">
         <lst name="defaults">
             <str name="df">text</str>
             <bool name="tv">true</bool>

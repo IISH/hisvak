@@ -2,9 +2,11 @@
     <form id="query-form" action="#{url_for_home}" method="GET">
 
         <div class="inputs">
-            <span #annTitle("Add the query using the &q= parameter")>$resource.searchFor: <input type="text" id="q" name="q"
-                                                                                  value="$!esc.html($params.get('q'))"/> <input
-                    type="submit" id="querySubmit" value="$resource.submit"/> <input type="button" id="reset" value="$resource.reset" /></span>
+            <span #annTitle("Add the query using the &q= parameter")>$resource.searchFor: <input type="text" id="q"
+                                                                                                 name="q"
+                                                                                                 value="$!esc.html($params.get('q'))"/> <input
+                    type="submit" id="querySubmit" value="$resource.submit"/> <input type="button" id="reset"
+                                                                                     value="$resource.reset"/></span>
         </div>
 
         #if($request.params.get('debugQuery'))
@@ -20,17 +22,25 @@
         #end
 
         #if ($params.getParams('fq').size() > 0)
-        <div class="constraints" #annTitle("Lists out the &fq filters.  Click to remove.")>
-            $resource.filter:
-            #foreach($fq in $params.getParams('fq'))
-                #set($previous_fq_count=$velocityCount - 1)
-                #if($fq != '')
-                    #set($kv=$fq.split(':', 2))
-                    <a class="constraint" href="#url_for_filters($request.params.getParams('fq').subList(0,$previous_fq_count))">$resource.get($kv[0]):$kv[1]</a>
+            <div class="constraints" #annTitle("Lists out the &fq filters.  Click to remove.")>
+                $resource.filter:
+                #foreach($fq in $params.getParams('fq'))
+                    #set($previous_fq_count=$velocityCount - 1)
+                    #if($fq != '')
+                        #set($kv=$fq.split(':', 2))
+                        #set($fqList=[])
+                        #foreach($fq2 in $params.getParams('fq'))
+                            #if ( $fq!=$fq2)
+                                $!fqList.add($fq2)
+                            #end
+                        #end
+                        <a class="constraint"
+                           href="#url_for_filters($fqList)">$resource.get($kv[0])
+                            :#msg($kv[0],$kv[1])</a>
+                    #end
                 #end
-            #end
-        </div>
-            #end
+            </div>
+        #end
         <div class="parsed_query_header">
             #if($request.params.get('debugQuery'))
                 <a href="#" onclick='jQuery(this).siblings("div").toggle(); return false;'>toggle parsed query</a>

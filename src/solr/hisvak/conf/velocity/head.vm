@@ -31,11 +31,13 @@
                     }
                 });
 
-        $('\#reset').click(function(){
+        $('\#reset').click(function () {
             $("\#q").val("");
         });
 
-        // http://localhost:8983/solr/terms?terms.fl=name&terms.prefix=i&terms.sort=count
+        $('.facet-field-select').change(function () {
+            this.form.submit();
+        });
     });
 
     function toggle(className) {

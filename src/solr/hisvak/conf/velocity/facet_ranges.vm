@@ -12,4 +12,9 @@
 	#set($after = $field.value.after)
 	#display_facet_range($f, $display, $name, $start, $end, $gap, $before, $after)
   #end
+<form class="facet-field-select" action="#url_for_lens" method="GET">
+    <input type="text" name="from"/>
+    <input type="text" name="to"/>
+    <input type="submit"/>
+</form>
 #end

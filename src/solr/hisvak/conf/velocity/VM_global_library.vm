@@ -195,3 +195,11 @@
         $math.add($inval,$gapval)##
     #end
 #end
+
+#macro(msg $fieldName $facetName )
+    #if ($fieldName=='Landelijk_s')
+        $resource.get("$fieldName.$facetName")
+    #else
+        $facetName
+    #end
+#end

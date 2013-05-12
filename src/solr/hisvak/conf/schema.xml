@@ -121,6 +121,7 @@
         <!-- catchall field, containing all other searchable text fields (implemented
              via copyField further on in this schema  -->
         <field name="text" type="text_general" indexed="true" stored="false" multiValued="true"/>
+        <field name="OprOph_text" type="text_general" indexed="true" stored="false" multiValued="true"/>
 
         <!-- catchall text field that indexes tokens both normally and in reverse for efficient
              leading wildcard queries. -->
@@ -193,6 +194,9 @@
 
     <copyField source="*" dest="text"/>
     <copyField source="content" dest="text"/>
+    <copyField source="Opr_jar_i" dest="OprOph_is"/>
+    <copyField source="Oph_jar_i" dest="OprOph_is"/>
+    <copyField source="OprOph_is" dest="OprOph_text"/>
     <copyField source="Nmorg_std" dest="Nmorg_std_s"/>
     <copyField source="Plaats_StandaardNaam" dest="Plaats_StandaardNaam_s"/>
     <copyField source="id" dest="Nrorg_std_i"/>

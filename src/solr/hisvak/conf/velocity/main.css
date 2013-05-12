@@ -21,12 +21,12 @@
 }
 
 #toggle {
-    float:right;
+    float: right;
 }
 
 #toggle a:link {
     font-weight: bold;
-    color:black;
+    color: black;
 }
 
 a:link {
@@ -98,11 +98,19 @@ a {
 .facet-field {
     font-weight: bold;
 }
+
 .facet-field-select {
     font-weight: bold;
     width: 265px;
-    margin-top:5px;
-    margin-bottom:5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.facet-range-select {
+    font-size: 10pt;
+}
+.facet-range-select .input {
+    font-size: 10pt;
 }
 
 .highlight {
@@ -151,7 +159,7 @@ a {
 .query-box #q {
     /*margin-left: 8px;*/
     width: 60%;
-    height: 50px;
+    /*height: 50px;*/
     border: 1px solid #999;
     font-size: 1em;
     padding: 0.4em;
@@ -169,7 +177,7 @@ a {
     font-size: 0.8em;
 }
 
-.query-box .inputs {
+.query-box .input {
     position: relative;
 
 }
@@ -228,12 +236,17 @@ a {
 .result-tr:nth-child(2n+1) {
     background-color: #73BDE7;
 }
+
 .result-tr:nth-child(2n) {
     background-color: #eee;
 }
 
 .selected-facet-field {
     font-weight: bold;
+}
+
+.notselected-facet-field {
+    color: black;
 }
 
 li.show {

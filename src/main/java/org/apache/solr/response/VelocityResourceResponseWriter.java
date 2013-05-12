@@ -89,14 +89,14 @@ public class VelocityResourceResponseWriter implements QueryResponseWriter {
 
         // create output, optionally wrap it into a json object
         if (wrap_response) {
-            StringWriter stringWriter = new StringWriter();
-            template.merge(context, stringWriter);
+            Gobble gobble = new Gobble();
+            template.merge(context, gobble);
 
             if (layout_template != null) {
-                context.put("content", stringWriter.toString());
-                stringWriter = new StringWriter();
+                context.put("content", gobble.toString());
+                gobble = new Gobble();
                 try {
-                    engine.getTemplate(layout_template + ".vm").merge(context, stringWriter);
+                    engine.getTemplate(layout_template + ".vm").merge(context, gobble);
                 } catch (Exception e) {
                     throw new IOException(e.getMessage());
                 }
@@ -104,13 +104,15 @@ public class VelocityResourceResponseWriter implements QueryResponseWriter {
 
             if (json_wrapper != null) {
                 writer.write(request.getParams().get("v.json") + "(");
-                writer.write(getJSONWrap(stringWriter.toString()));
+                writer.write(getJSONWrap(gobble.toString()));
                 writer.write(')');
             } else {  // using a layout, but not JSON wrapping
-                writer.write(stringWriter.toString());
+                writer.write(gobble.toString());
             }
         } else {
-            template.merge(context, writer);
+            final Gobble gobble = new Gobble();
+            template.merge(context, gobble);
+            writer.write(gobble.toString());
         }
     }
 

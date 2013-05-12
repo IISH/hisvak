@@ -22,7 +22,7 @@
 -->
 <config>
 
-    <requestHandler name="/dataimport" class="org.apache.solr.handler.dataimport.DataImportHandler">
+    <requestHandler name="/dataimport" class="org.apache.solr.handler.dataimport.DataImportHandler" enable="${solr.admin.enabled:false}">
         <lst name="defaults">
             <str name="config">data-config.xml</str>
         </lst>
@@ -906,8 +906,8 @@
             <str name="wt">velocity</str>
             <str name="v.template">browse</str>
             <str name="v.layout">layout</str>
-            <str name="title">Database of Dutch Trade Unions</str>
-            <!--<str name="v.properties">lang.properties</str>-->
+            <str name="v.proxyUrl">http://localhost:8983</str>
+            <!--<str name="v.properties">velocity.properties</str>-->
 
             <!-- Query settings -->
             <str name="defType">edismax</str>
@@ -942,13 +942,13 @@
             <str name="facet.limit">-1</str>
             <str name="facet.range.other">after</str>
             <str name="facet.range">Opr_jar_i</str>
-            <int name="f.Opr_jar_i.facet.range.start">1620</int>
+            <int name="f.Opr_jar_i.facet.range.start">0</int>
             <int name="f.Opr_jar_i.facet.range.end">2020</int>
             <int name="f.Opr_jar_i.facet.range.gap">10</int>
             <!--<str name="f.Opr_jar_i.facet.range.other">before</str>-->
             <!--<str name="f.Opr_jar_i.facet.range.other">after</str>-->
             <str name="facet.range">Oph_jar_i</str>
-            <int name="f.Oph_jar_i.facet.range.start">1870</int>
+            <int name="f.Oph_jar_i.facet.range.start">0</int>
             <int name="f.Oph_jar_i.facet.range.end">2020</int>
             <int name="f.Oph_jar_i.facet.range.gap">10</int>
             <!--<str name="f.Opr_jar_i.facet.range.other">before</str>-->

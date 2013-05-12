@@ -23,12 +23,11 @@ final class SolrVelocityResourceTool extends ResourceTool {
 
     @Override
     protected ResourceBundle getBundle(String baseName, Object loc) {
-        Locale locale = toLocaleParams(loc);
+        final Locale locale = toLocaleParams(loc);
         if (baseName == null || locale == null) {
+            log.warn("Unable to determine the locale and resource bundle.");
             return null;
         }
-        log.info("baseName: " + baseName);
-        log.info("locale: " + locale.getLanguage());
         return ResourceBundle.getBundle(baseName, locale, solrClassLoader);
     }
 

@@ -22,12 +22,12 @@
 #end
 
 #macro(lang)
-#if ($request.params.get('lang'))&lang=#param('lang')#end
+#if ($request.params.lang)&lang=$request.params.lang)#end
 #end
 
 #macro(param $key)$request.params.get($key)#end
 
-#macro(url_root)/solr#end
+#macro(url_root)#param('v.proxyUrl')/solr#end
 
 ## TODO: s/url_for_solr/url_for_core/ and s/url_root/url_for_solr/
 #macro(core_name)$request.core.name#end

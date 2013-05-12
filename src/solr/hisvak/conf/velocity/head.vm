@@ -31,18 +31,79 @@
                     }
                 });
 
-        $('\#reset').click(function () {
-            $("\#q").val("");
-        });
+        $("\#q_to").autocomplete('#{url_for_solr}/terms', {  ## backslash escaped #q as that is a macro defined in VM_global_library.vm
+                    extraParams: {
+                        'terms.prefix': function () {
+                            return $("\#q_to").val();
+                        },
+                        'terms.sort': 'count',
+                        'terms.fl': 'OprOph_text',
+                        'wt': 'velocity',
+                        'v.template': 'suggest'
+                    }
+                }
+        ).keydown(function (e) {
+                    if (e.keyCode === 13) {
+                        $("#query-form").trigger('submit');
+                    }
+                });
 
-        $('.facet-field-select').change(function () {
-            this.form.submit();
-        });
+        $("\#q_from").autocomplete('#{url_for_solr}/terms', {  ## backslash escaped #q as that is a macro defined in VM_global_library.vm
+                    extraParams: {
+                        'terms.prefix': function () {
+                            return $("\#q_from").val();
+                        },
+                        'terms.sort': 'count',
+                        'terms.fl': 'OprOph_text',
+                        'wt': 'velocity',
+                        'v.template': 'suggest'
+                    }
+                }
+        ).keydown(function (e) {
+                    if (e.keyCode === 13) {
+                        $("#query-form").trigger('submit');
+                    }
+                });
+    });
+
+    $('\#reset').click(function () {
+        $("\#q").val("");
+        $("input:hidden").remove();
+        this.form.submit();
+    });
+
+    $('.facet-field-select').change(function () {
+        this.form.submit();
+    });
+
+    $('\#reset').click(function () {
+        $("\#q").val("");
+        $("\#q_to").val("");
+        $("\#q_from").val("");
+        $("input:hidden").remove();
+        this.form.submit();
+    });
+
+    $('.facet-field-select').change(function () {
+        this.form.submit();
     });
 
     function toggle(className) {
         $('.' + className).toggle();
     }
+
+    $('\#querySubmit').click(function () {
+        var q_to = $('\#q_to');
+        var q_from = $('\#q_from');
+        if (q_from.val().length != 0 || q_to.val().length != 0) {
+            if (q_to.val().length == 0) q_to.val('*');
+            if (q_from.val().length == 0) q_from.val('*');
+            var q = 'OprOph_is:[' + q_from.val() + ' TO ' + q_to.val() + ']';
+            var OprOph_is = $('<input/>', {type: 'hidden', id: 'allFQs', name: 'fq', value: q});
+            $('\#query-form').append(OprOph_is);
+        }
+        return true;
+    });
 
 </script>
 

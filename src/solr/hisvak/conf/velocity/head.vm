@@ -64,47 +64,43 @@
                         $("#query-form").trigger('submit');
                     }
                 });
-    });
 
-    $('\#reset').click(function () {
-        $("\#q").val("");
-        $("input:hidden").remove();
-        this.form.submit();
-    });
+        $('.facet-field-select').change(function () {
+            this.form.submit();
+        });
 
-    $('.facet-field-select').change(function () {
-        this.form.submit();
-    });
+        $('\#reset').click(function () {
+            $("\#q").val("");
+            $("\#q_to").val("");
+            $("\#q_from").val("");
+            $("input:hidden").remove();
+            this.form.submit();
+        });
 
-    $('\#reset').click(function () {
-        $("\#q").val("");
-        $("\#q_to").val("");
-        $("\#q_from").val("");
-        $("input:hidden").remove();
-        this.form.submit();
-    });
+        $('.sort-field-select').change(function () {
+            var q = $("\#sortfield").val() + " " + $("\#sortorder").val();
+            var sort = $('<input/>', {type: 'hidden', id: 'sort', name: 'sort', value: q});
+            $('\#query-form').append(sort);
+            this.form.submit();
+        });
 
-    $('.facet-field-select').change(function () {
-        this.form.submit();
+        $('\#querySubmit').click(function () {
+            var q_to = $('\#q_to');
+            var q_from = $('\#q_from');
+            if (q_from.val().length != 0 || q_to.val().length != 0) {
+                if (q_to.val().length == 0) q_to.val('*');
+                if (q_from.val().length == 0) q_from.val('*');
+                var q = 'OprOph_is:[' + q_from.val() + ' TO ' + q_to.val() + ']';
+                $('.OprOph_is').remove();
+                var input = $('<input/>', {type: 'hidden', id: 'range', name: 'fq', value: q});
+                $('\#query-form').append(input);
+            }
+        });
     });
 
     function toggle(className) {
         $('.' + className).toggle();
     }
-
-    $('\#querySubmit').click(function () {
-        var q_to = $('\#q_to');
-        var q_from = $('\#q_from');
-        if (q_from.val().length != 0 || q_to.val().length != 0) {
-            if (q_to.val().length == 0) q_to.val('*');
-            if (q_from.val().length == 0) q_from.val('*');
-            var q = 'OprOph_is:[' + q_from.val() + ' TO ' + q_to.val() + ']';
-            var OprOph_is = $('<input/>', {type: 'hidden', id: 'allFQs', name: 'fq', value: q});
-            $('\#query-form').append(OprOph_is);
-        }
-        return true;
-    });
-
 </script>
 
 <style type="text/css">

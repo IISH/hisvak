@@ -2,12 +2,29 @@
     <form id="query-form" action="#{url_for_home}" method="GET">
 
         <div class="inputs">
-            <span>$resource.searchFor: <input type="text" id="q" name="q" value="$!esc.html($params.get('q'))" style="width:200px"/>
-                $resource.searchRange: <input type="text" value="$!esc.html($params.get('q_from'))" id="q_from" name="q_from" size="8"/> $resource.to <input
-                        type="text" value="$!esc.html($params.get('q_to'))" id="q_to" name="q_to" size="8"/>
+            <span>$resource.searchFor: <input type="text" id="q" name="q" value="$!esc.html($params.get('q'))"
+                                              style="width:200px"/>
+                $resource.searchRange: <input type="text" value="#tofrom(0)" id="q_from"
+                                              name="q_from" size="8"/> $resource.to <input
+                        type="text" value="#tofrom(1)" id="q_to" name="q_to" size="8"/>
             <input type="submit" id="querySubmit" value="$resource.submit"/> <input type="button" id="reset"
                                                                                     value="$resource.reset"/></span>
+    <span style="float: right">
+    $resource.order: <select name="sortorder" id="sortorder" class="sort-field-select">
+        #sortorder('asc')
+        #sortorder('desc')
+    </select> $resource.sortFields: <select name="sortfield" id="sortfield" class="sort-field-select">
+        #sortfield('score')
+        #sortfield('Nmorg_std_s')
+        #sortfield('StandaardProvincie_s')
+        #sortfield('Plaats_StandaardNaam_s')
+        #sortfield('Beroepsgroep_s')
+        #sortfield('Richting_s')
+        #sortfield('Opr_jar_i')
+    </select>
+</span>
         </div>
+
 
         #if($request.params.get('debugQuery'))
             <input type="hidden" name="debugQuery" value="true"/>
@@ -17,43 +34,37 @@
         #end
         #foreach($fq in $request.params.getParams('fq'))
             #if ($fq != "{!bbox}")
-                <input type="hidden" name="fq" id="allFQs" value="$esc.html($fq)"/>
+                #set($kv=$fq.split(':', 2))
+                <input class="$kv[0]" type="hidden" name="fq" id="allFQs" value="$esc.html($fq)"/>
             #end
         #end
-
-    #*
-            #if ($params.getParams('fq').size() > 0)
-                <div class="constraints" #annTitle("Lists out the &fq filters.  Click to remove.")>
-                    $resource.filter:
-                    #foreach($fq in $params.getParams('fq'))
-                        #set($previous_fq_count=$velocityCount - 1)
-                        #if($fq != '')
-                            #set($kv=$fq.split(':', 2))
-                            #set($fqList=[])
-                            #foreach($fq2 in $params.getParams('fq'))
-                                #if ( $fq!=$fq2)
-                                    $!fqList.add($fq2)
-                                #end
-                            #end
-                            <a class="constraint"
-                               href="#url_for_filters($fqList)">$resource.get($kv[0])
-                                :#msg($kv[0],$kv[1])</a>
-                        #end
-                    #end
-                </div>
-            #end
-    *#
-    #*<div class="parsed_query_header">
-        #if($request.params.get('debugQuery'))
-            <a href="#" onclick='jQuery(this).siblings("div").toggle(); return false;'>toggle parsed query</a>
-
-            <div class="parsed_query" style="display:none">$response.response.debug.parsedquery</div>
-        #end
-        #set($queryOpts = $request.params.get("queryOpts"))
-        #if($queryOpts && $queryOpts != "")
-            <input type="hidden" name="queryOpts" value="$queryOpts"/>
-        #end
-    </div>*#
     </form>
-
 </div>
+
+#macro(tofrom $i)
+#foreach($fq in $params.getParams('fq'))
+#set($kv=$fq.split(':', 2))
+#if ($kv[0]=='OprOph_is')
+$kv[1].split(' TO ')[$i].replaceAll('\[|\]', '')
+#end
+#end
+#end
+
+#macro(sortfield $field)
+    #if($request.params.get('sort'))
+        #set($v=$request.params.get('sort').split(' ')[0])
+    #else
+        #set($v='score')
+    #end
+<option value="$field" #if($v==$field)selected="true"#end>$resource.get($field)</option>
+#end
+
+#macro(sortorder $field)
+    #if($request.params.get('sort'))
+        #set($v=$request.params.get('sort').split(' ')[1])
+    #else
+        #set($v='asc')
+    #end
+<option value="$field" #if($v==$field)selected="true"#end>$resource.get($field)</option>
+#end
+

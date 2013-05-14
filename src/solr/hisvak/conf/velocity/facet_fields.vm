@@ -3,11 +3,11 @@
     #foreach($field in $response.facetFields)
     ## Hide facets without value
         #if($field.values.size()>15)
-        <form action="#" method="GET">
-            <select class="facet-field-select" name="fq">
+        <form action='#' method='GET'>
+            <select class='facet-field-select' name='fq'>
                 <option>$resource.get($field.name):</option>
                 #foreach($facet in $field.values)
-                    <option value="$field.name:$facet.name">#msg($field.name $facet.name) ($facet.count)</option>
+                    <option value='$field.name:"$facet.name"'>#msg($field.name $facet.name) ($facet.count)</option>
                 #end
             </select>
         </form>

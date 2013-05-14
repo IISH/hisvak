@@ -66,7 +66,10 @@
                 });
 
         $('.facet-field-select').change(function () {
-            this.form.submit();
+            var q = this.value;
+            var fq = $('<input/>', {type: 'hidden', id: 'allFQs', name: 'fq', value: q});
+            $('\#query-form').append(fq);
+            $('\#query-form').submit();
         });
 
         $('\#reset').click(function () {

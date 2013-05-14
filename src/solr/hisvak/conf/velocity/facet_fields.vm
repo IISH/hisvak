@@ -3,7 +3,7 @@
     #foreach($field in $response.facetFields)
     ## Hide facets without value
         #if($field.values.size()>15)
-        <form action="#url_for_lens" method="GET">
+        <form action="#" method="GET">
             <select class="facet-field-select" name="fq">
                 <option>$resource.get($field.name):</option>
                 #foreach($facet in $field.values)

@@ -14,10 +14,12 @@ Start the SOLR instance with
 hisvak/start.sh [version]
 
 For example
+
 $ ./start.sh 4.5.1
 
 ##Build
 $ mvn clean package
+
 Which will build the hisvak-1.0-SNAPSHOT.jar
 
 ##Dependencies

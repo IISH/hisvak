@@ -37,7 +37,6 @@ See http://wiki.apache.org/solr/DataImportHandler
                 <field column="Oph_dag_i" xpath="/HISVAK/Oph_dag"/>
                 <field column="Oph_mnd_i" xpath="/HISVAK/Oph_mnd"/>
                 <field column="Oph_jar_i" xpath="/HISVAK/Oph_jar"/>
-
                 <field column="NummerOrg_is" xpath="/HISVAK/bronnen/HISVAK_BRON/NummerOrg"/>
                 <field column="Bron_concat_ss" xpath="/HISVAK/bronnen/HISVAK_BRON/Bron_concat"/>
                 <field column="Nummer_lid_is" xpath="/HISVAK/leden/HISVAK_LID/Nummer_lid"/>

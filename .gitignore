@@ -3,7 +3,9 @@ hisvak.iml
 import
 start.sh
 *.zip
+*.tgz
 solr-4.3.0
+solr-4.5.1
 *.docx
 *.mdb
 data

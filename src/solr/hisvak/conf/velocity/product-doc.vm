@@ -1,24 +1,23 @@
 #parse('debug.vm')
 
-#set($toggle = 'toggle'+$doc.getFieldValue('id'))
+#set($id=$doc.getFieldValue('id'))
+#set($toggle = 'toggle'+$id)
 
 <div class="$toggle">
-    <div class="result-title"><b>#field('Nmorg_std_s')</b><span class="mlt"><a href="javascript:toggle('$toggle')">(Full
-        detail)</a></span></div>
+    <div class="result-title"><b>#field('Nmorg_std_s')</b><span class="mlt"><a name="$id" href="javascript:toggle('$toggle')">$resource.fullview</a></span></div>
     #row('StandaardGemNaam_s')
-    #row('StandaardProvincie_s')
+    #row('Beroepsgroep_s')
     #row('Bedrijfsgroep_s')
     #row('Richting_s')
     #date('Opr')
 </div>
 
 <div class="$toggle" style="display: none">
-    <div class="result-title"><b>#field('Nmorg_std_s')</b><span class="mlt"><a href="javascript:toggle('$toggle')">(Brief
-        detail)</a></span></div>
+    <div class="result-title"><b>#field('Nmorg_std_s')</b><span class="mlt"><a href="javascript:toggle('$toggle')">$resource.briefview</a></span></div>
     #row('Landelijk_s')
     #row('Plaats_StandaardNaam_s')
     #row('StandaardGemNaam_s')
-    #row('StandaardProvincie_s')
+    #row('Beroepsgroep_s')
     #row('Bedrijfsgroep_s')
     #row('Richting_s')
     #date('Opr')

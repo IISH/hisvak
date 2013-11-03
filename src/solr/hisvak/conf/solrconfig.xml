@@ -884,7 +884,7 @@
             <str name="wt">velocity</str>
             <str name="v.template">browse</str>
             <str name="v.layout">layout</str>
-            <str name="">{$v.proxyUrl:http://localhost:8983}</str>
+            <str name="">${v.proxyUrl:http://localhost:8983}</str>
             <!--<str name="v.properties">velocity.properties</str>-->
 
             <!-- Query settings -->

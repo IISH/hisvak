@@ -41,7 +41,7 @@
         </div>
     #end
     #if ($doc.getFieldValue('Lid_concat_ss'))
-        <div>#$resource.Lid_concat_ss:
+        <div>$resource.Lid_concat_ss:
             <table class="bron">
                 <tr class="result-tr">
                     <td>$resource.Lid_concat_ss.Jaar</td>

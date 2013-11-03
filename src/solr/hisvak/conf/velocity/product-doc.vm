@@ -48,7 +48,7 @@
                     <td>$resource.Lid_concat_ss.Aantalleden</td>
                     <td>$resource.Lid_concat_ss.Bronlid</td>
                 </tr>
-                #foreach($tr in $doc.getFieldValue('Lid_concat_ss', $resources))
+                #foreach($tr in $doc.getFieldValue('Lid_concat_ss'))
                     <tr class="result-tr">
                         #set($trs=$tr.split('_'))
                     ##                        0=Nummer_lid, 1=Jaar, 2=Aantalleden, 3=Bronlid

@@ -2,6 +2,10 @@ def hisvak = new XmlParser().parse(args[0])
 def hisvak_bron = new XmlParser().parse(args[1])
 def hisvak_lid = new XmlParser().parse(args[2])
 
+String normalize(String text) {
+    (text?.trim()) ?: '.'
+}
+
 hisvak.HISVAK.each {
     def Nrorg_std = it.Nrorg_std.text()
     def bronnen = hisvak_bron.findAll {
@@ -12,10 +16,10 @@ hisvak.HISVAK.each {
     }
 
     bronnen.each {
-        new Node(it, 'Bron_concat', it.NummerOrg.text() + '_' + it.Naamorg?.text() + '_' + it.Bron?.text())
+        new Node(it, 'Bron_concat', normalize(it.NummerOrg.text()) + '_' + normalize(it.Naamorg?.text()) + '_' + normalize(it.Bron?.text()))
     }
     leden.each {
-        new Node(it, 'Lid_concat', it.Nummer_lid.text() + '_' + it.Jaar?.text() + '_' + it.Aantalleden?.text() + '_' + it.Bronlid?.text())
+        new Node(it, 'Lid_concat', normalize(it.Nummer_lid.text()) + '_' + normalize(it.Jaar?.text()) + '_' + normalize(it.Aantalleden?.text()) + '_' + normalize(it.Bronlid?.text()))
     }
 
     new Node(it, 'bronnen', bronnen)

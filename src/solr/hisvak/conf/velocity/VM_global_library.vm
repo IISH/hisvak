@@ -22,7 +22,7 @@
 #end
 
 #macro(lang)
-#if ($request.params.lang)&lang=$request.params.lang)#end
+#if ($request.params.lang)&lang=$request.params.lang#end
 #end
 
 #macro(param $key)$request.params.get($key)#end

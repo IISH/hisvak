@@ -2,7 +2,7 @@
     <div id="head">
         <div class="logo">
             <h1>$resource.title</h1>
-            <div id="toggle"><a href="#lensNoLang&lang=$resource.toggleLanguageCode">$resource.toggleLanguage</a></div>
+            <div class="toggle"><a href="#lens&v.template=accountability">$resource.accountability</a> | <a href="#lensNoLang&lang=$resource.toggleLanguageCode">$resource.toggleLanguage</a></div>
         </div>
     </div>
 </a>

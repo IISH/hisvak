@@ -20,11 +20,12 @@
     display: inline;
 }
 
-#toggle {
+.toggle {
     float: right;
+    margin-right: 20px;
 }
 
-#toggle a:link {
+.toggle a:link {
     font-weight: bold;
     color: black;
 }

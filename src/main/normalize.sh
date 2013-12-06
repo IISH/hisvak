@@ -5,14 +5,16 @@
 cd ../..
 p=$(pwd)
 
-if [ ! -d $p/src/main/groovy/split.groovy ] ; then
-    echo "Cannot find $p/groovy/split.groovy"
+s=$p/src/main/groovy/split.groovy
+if [ ! -f $s ] ; then
+    echo "Cannot find $s"
     exit -1
 fi
 
-if [ ! -d $p/import ] ; then
-	mkdir $p/import
+d=$p/dataset
+if [ ! -d $d/import ] ; then
+	mkdir $d/import
 fi
 
-cd $p/import
-groovy groovy/split.groovy HISVAK.xml HISVAK_BRON.xml HISVAK_LID.xml
+cd $d
+groovy $s HISVAK.xml HISVAK_BRON.xml HISVAK_LID.xml

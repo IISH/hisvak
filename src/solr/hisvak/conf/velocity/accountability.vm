@@ -23,7 +23,7 @@
 
 <div class="results">
 
-<p>$resource.accountability_1</p>
+<p><img style="float:left;margin-right:10px;margin-bottom: 50px" width="160px" title="Sluit u aan! Bij uw modernen vakbond. NVV." alt="poster" src="#{url_for_solr}/admin/file?file=/velocity/30051000311065.jpg&contentType=image/jpeg)"/>$resource.accountability_1</p>
 <p>$resource.accountability_2</p>
 <p>$resource.accountability_3</p>
 

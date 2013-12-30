@@ -1,9 +1,10 @@
 #!/bin/bash
 #
+# start.sh
+# 
 # Should be run from src/main
 
 version=$1
-cd ../..
 if [ -z "$1" ] ; then
 	version=solr-4.5.1
 fi
@@ -12,6 +13,7 @@ p=$(pwd)
 
 if [ ! -d $p/$version ] ; then
     echo "Solr application not found: $p/$version"
+    echo "start.sh must be run from folder 'hisvak'"
     exit -1
 fi
 
@@ -32,6 +34,6 @@ ln -s $p/$version/dist/solr-dataimporthandler-extras-4.5.1.jar $lib/solr-dataimp
 ln -s $p/target/hisvak-1.0-SNAPSHOT.jar $lib/hisvak-1.0-SNAPSHOT.jar
 
 cd $p/$version/example
-cmd="java -Dsolr.admin.enabled=true -Dsolr.solr.home=/home/lwo/hisvak/src/solr -Dsolr.dist=/home/lwo/hisvak/$version -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar start.jar"
+cmd="java -Dsolr.admin.enabled=true -Dsolr.solr.home=$p/src/solr -Dsolr.dist=$p/$version -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar start.jar"
 echo $cmd
 $cmd

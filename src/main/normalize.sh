@@ -1,13 +1,14 @@
 #!/bin/bash
 #
-# Should be run from src/main
+# normalize.sh
+# Should be run from 'hisvak'
 
-cd ../..
 p=$(pwd)
 
 s=$p/src/main/groovy/split.groovy
 if [ ! -f $s ] ; then
     echo "Cannot find $s"
+    echo "normalize.sh should be run from folder 'hisvak'"
     exit -1
 fi
 

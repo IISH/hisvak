@@ -23,7 +23,7 @@
 
 <div class="results">
 
-<p><a href="http://hdl.handle.net/10622/395C60F3-EAC6-4466-B863-E1C37A8B85FF"><img style="float:left;margin-right:10px;margin-bottom: 50px" width="160px" title="Sluit u aan! Bij uw modernen vakbond. NVV." alt="poster" src="#{url_for_solr}/admin/file?file=/velocity/30051000311065.jpg&contentType=image/jpeg)" target="_blank"/></a>$resource.accountability_1</p>
+<p><a href="http://hdl.handle.net/10622/395C60F3-EAC6-4466-B863-E1C37A8B85FF" target="_blank"><img style="float:left;margin-right:10px;margin-bottom: 50px" width="160px" title="Sluit u aan! Bij uw modernen vakbond. NVV." alt="poster" src="#{url_for_solr}/admin/file?file=/velocity/30051000311065.jpg&contentType=image/jpeg)"/></a>$resource.accountability_1</p>
 <p>$resource.accountability_2</p>
 <p>$resource.accountability_3</p>
 

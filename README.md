@@ -23,7 +23,7 @@ $ src/main/start.sh [version] ( the version defaults to 4.5.1 )
 
 For example
 
-$ ./start.sh solr-4.5.1
+$ ./src/main/start.sh solr-4.5.1
 
 This will place In the solr/lib folder the following jars or symbolic links to the libraries:
 

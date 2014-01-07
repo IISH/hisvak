@@ -4,11 +4,9 @@ The Hisvak dataset opened up with Solr.
 ##Hisvak installation
 Clone this git repository. The rootfolder should be 'hisvak'
 
-Download a 4.x Solr distribution from:
-http://www.apache.org/dyn/closer.cgi/lucene/solr
+Download a 4.x Solr distribution from: http://www.apache.org/dyn/closer.cgi/lucene/solr
 
-and unpack it in the hisvak folder:
-hisvak/[the solr version]
+and unpack it in the hisvak folder: hisvak/[the solr version]
 
 ##Build
 $ mvn clean package
@@ -20,6 +18,7 @@ The start procedure will arrange the correct placement of this artifact in the S
 Start the SOLR instance in the hisvak folder:
 
 $ cd hisvak
+
 $ src/main/start.sh [version] ( the version defaults to 4.5.1 )
 
 For example

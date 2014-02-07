@@ -1,0 +1,14 @@
+<a href="#url_for_home?q=#lang">
+    <div id="head">
+        <div class="logo">
+            <div class="payoff">$resource.logo</div>
+        </div>
+    </div>
+</a>
+
+<div class="layer2">
+    <div class="mainmenu">
+        <div class="toggle"><a href="#lens&v.template=accountability">$resource.accountability</a> | <a href="#lensNoLang&lang=$resource.toggleLanguageCode">$resource.toggleLanguage</a></div>
+    </div>
+</div>
+<h1>$resource.title</h1>

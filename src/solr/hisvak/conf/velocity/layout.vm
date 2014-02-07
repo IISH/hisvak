@@ -1,11 +1,12 @@
+#set($theme='iish')
 <html>
 <head>
-  #parse("head.vm")
+  #parse("themes/${theme}/head.vm")
 </head>
   <body>
 ##    <div id="admin"><a href="#url_root/#/#core_name">Solr Admin</a></div>
     <div id="header">
-      #parse("header.vm")
+      #parse("themes/${theme}/header.vm")
     </div>
     #*<div id="tabs">
       #parse("tabs.vm")
@@ -14,7 +15,7 @@
       $content
     </div>
     <div id="footer">
-      #parse("footer.vm")
+      #parse("themes/${theme}/footer.vm")
     </div>
   </body>
 </html>

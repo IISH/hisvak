@@ -2,7 +2,7 @@
 #
 # start.sh
 # 
-# Should be run from src/main
+# Should be run from hisvak folder
 
 version=$1
 if [ -z "$1" ] ; then

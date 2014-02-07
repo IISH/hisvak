@@ -1,14 +1,15 @@
-<a href="#url_for_home?q=#lang">
+<a href="http://www.socialhistory.org/$resource.lang">
     <div id="head">
         <div class="logo">
-            <div class="payoff">$resource.logo</div>
+            <div class="payoff-$resource.lang">$resource.logo</div>
         </div>
     </div>
 </a>
 
 <div class="layer2">
     <div class="mainmenu">
-        <div class="toggle"><a href="#lens&v.template=accountability">$resource.accountability</a> | <a href="#lensNoLang&lang=$resource.toggleLanguageCode">$resource.toggleLanguage</a></div>
-    </div>
+        <div class="toggle"><a href="http://www.socialhistory.org/$resource.lang">$resource.iish</a> | <a href="#lens&v.template=accountability">$resource.accountability</a></div>
+    </div>  <div class="mainmenu" style="float:right"><div class="toggle"><a href="#lensNoLang&lang=$resource.toggleLanguageCode">$resource.toggleLanguage</a></div></div>
+
 </div>
 <h1>$resource.title</h1>

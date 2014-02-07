@@ -7,9 +7,10 @@
                 $resource.searchRange: <input type="text" value="#tofrom(0)" id="q_from"
                                               name="q_from" size="8"/> $resource.to <input
                         type="text" value="#tofrom(1)" id="q_to" name="q_to" size="8"/>
-            <input type="submit" id="querySubmit" value="$resource.submit"/> <input type="button" id="reset"
-                                                                                    value="$resource.reset"/></span>
+            <input type="submit" id="querySubmit" value="$resource.submit"/>
+        #*    </span>
     <span style="float: right">
+        *#
     $resource.order: <select name="sortorder" id="sortorder" class="sort-field-select">
         #sortorder('asc')
         #sortorder('desc')
@@ -21,7 +22,8 @@
         #sortfield('Beroepsgroep_s')
         #sortfield('Richting_s')
         #sortfield('Opr_jar_i')
-    </select>
+    </select> <input type="button" id="reset"
+                     value="$resource.reset"/>
 </span>
         </div>
 

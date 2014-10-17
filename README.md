@@ -36,7 +36,6 @@ This will place In the solr/lib folder the following jars or symbolic links to t
 * velocity-1.7.jar
 * velocity-tools-2.0.jar
 
-
 ## Known issues
 Can't find bundle for base name resources, locale en_US,trace=java.util.MissingResourceException
 

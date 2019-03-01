@@ -1,29 +1,29 @@
-#hisvak
+# hisvak
 The Hisvak dataset opened up with Solr.
 
-##Hisvak installation
+## Hisvak installation
 Clone this git repository. The rootfolder should be 'hisvak'
 
 Download a 4.x Solr distribution from: http://www.apache.org/dyn/closer.cgi/lucene/solr
 
 and unpack it in the hisvak folder: hisvak/[the solr version]
 
-##Build
-$ mvn clean package
+## Build
+
+    $ mvn clean package
 
 Which will build the hisvak-1.0-SNAPSHOT.jar
 The start procedure will arrange the correct placement of this artifact in the Solr lib folder.
 
-##Start
+## Start
 Start the SOLR instance in the hisvak folder:
 
-$ cd hisvak
-
-$ src/main/start.sh [version] ( the version defaults to 4.5.1 )
+    $ cd hisvak
+    $ src/main/start.sh [version] ( the version defaults to 4.5.1 )
 
 For example
 
-$ ./src/main/start.sh solr-4.5.1
+    $ ./src/main/start.sh solr-4.5.1
 
 This will place In the solr/lib folder the following jars or symbolic links to the libraries:
 

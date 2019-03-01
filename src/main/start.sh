@@ -4,6 +4,8 @@
 # 
 # Should be run from hisvak folder
 
+set -e
+
 cd "${APPLICATION_PATH}"
 
 version=$1
@@ -20,12 +22,12 @@ if [[ ! -d "${p}/${version}" ]] ; then
 fi
 
 lib="${p}/src/solr/lib"
-if [[ ! -d ${lib} ]] ; then
-    echo "Solr library not found: ${p}/$lib"
-    exit -1
+if [[ -d "$lib" ]]
+then
+    rm -rf "$lib"
 fi
+mkdir "$lib"
 
-rm $lib/*.jar
 ln -s "${p}/${version}/contrib/velocity/lib/velocity-tools-2.0.jar" "$lib/velocity-tools-2.0.jar"
 ln -s "${p}/${version}/contrib/velocity/lib/velocity-1.7.jar" "$lib/velocity-1.7.jar"
 ln -s "${p}/${version}/contrib/velocity/lib/commons-beanutils-1.7.0.jar" "$lib/commons-beanutils-1.7.0.jar"

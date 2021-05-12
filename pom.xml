@@ -54,7 +54,7 @@
 
     <properties>
         <groovy.version>2.1.7</groovy.version>
-        <solr.version>4.5.1</solr.version>
+        <solr.version>8.8.2</solr.version>
     </properties>
 
 </project>
